@@ -3484,7 +3484,7 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
           <p>Prefer to talk it through? Call <a class="mwh-link" href="tel:7179958673">(717) 995-8673</a></p>
         </div>
         <div class="mwh-formcard">
-<div style="min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#777;border:2px dashed #cfcfcf;border-radius:8px">Your live Event Inquiry Form<br>appears here</div>
+<iframe src="https://api.leadconnectorhq.com/widget/form/MpLvyN2pDaMBpPr8UrFK" style="width:100%;height:825px;border:none;border-radius:3px" id="inline-MpLvyN2pDaMBpPr8UrFK" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Event Inquiry Form" data-height="825" data-layout-iframe-id="inline-MpLvyN2pDaMBpPr8UrFK" data-form-id="MpLvyN2pDaMBpPr8UrFK" title="Event Inquiry Form"></iframe>
         </div>
       </div>
     </div>
@@ -3667,7 +3667,7 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
           <p>Questions? Email <a class="mwh-link" href="mailto:contact@midwaybowl.com">contact@midwaybowl.com</a></p>
         </div>
         <div class="mwh-formcard">
-<div style="min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#777;border:2px dashed #cfcfcf;border-radius:8px">Your live League Form<br>appears here</div>
+<iframe src="https://api.leadconnectorhq.com/widget/form/y5X8HubkuCFdhd9sqc3b" style="width:100%;height:847px;border:none;border-radius:3px" id="inline-y5X8HubkuCFdhd9sqc3b" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="League Form" data-height="847" data-layout-iframe-id="inline-y5X8HubkuCFdhd9sqc3b" data-form-id="y5X8HubkuCFdhd9sqc3b" title="League Form"></iframe>
         </div>
       </div>
     </div>
@@ -3749,7 +3749,83 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
   <div class="mwh-strip" aria-hidden="true"><div class="mwh-strip-in"><span>Trivia Tuesdays</span><span>Music Bingo Wednesdays</span><span>Karaoke Thursdays</span><span>Rock &amp; Bowl Fridays</span><span>Live Bands</span><span>Holiday Parties</span><span>Trivia Tuesdays</span><span>Music Bingo Wednesdays</span><span>Karaoke Thursdays</span><span>Rock &amp; Bowl Fridays</span><span>Live Bands</span><span>Holiday Parties</span></div></div>
   <div id="cal-month" style="height:40px"></div>
 </div>
-<div class="mwh"><div class="mwh-wrap" style="padding-top:10px;padding-bottom:40px"><div style="border:2px dashed #cfcfcf;border-radius:10px;padding:60px 24px;text-align:center;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#777">Your live events calendar shows here<br><span style="font-family:Montserrat,sans-serif;text-transform:none;letter-spacing:0;font-size:15px">Same JetEngine calendar as today, restyled with red day headers and teal highlights</span></div></div></div>
+<div class="mwh"><div class="mwh-wrap" style="padding-top:10px;padding-bottom:40px">
+<style>
+.mwcal{border:1px solid var(--line);border-top:4px solid var(--red);border-radius:10px;background:#fff;overflow:hidden}
+.mwcal-top{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:12px}
+.mwcal-top h3{margin:0;font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:22px;color:var(--ink)}
+.mwcal-top button{background:none;border:1px solid var(--line);border-radius:6px;width:40px;height:40px;font-size:18px;cursor:pointer;color:var(--ink)}
+.mwcal-top button:disabled{opacity:.3;cursor:default}
+.mwcal-grid{display:grid;grid-template-columns:repeat(7,1fr)}
+.mwcal-dow{background:var(--red);color:#fff;font:600 12px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:10px 0}
+.mwcal-day{min-height:110px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px;font-size:13px}
+.mwcal-day:nth-child(7n){border-right:none}
+.mwcal-day.out{background:var(--soft);color:#bbb}
+.mwcal-day .n{font:600 14px/1 Oswald,sans-serif;margin-bottom:6px;display:inline-block}
+.mwcal-day.today .n{background:var(--teal);color:#fff;border-radius:50%;width:26px;height:26px;line-height:26px;text-align:center}
+.mwcal-ev{display:block;border-left:3px solid var(--teal);background:rgba(76,195,201,.12);border-radius:3px;padding:4px 6px;margin-top:4px;line-height:1.25;color:var(--ink)}
+.mwcal-ev.sp{border-left-color:var(--red);background:rgba(189,1,0,.08);font-weight:600}
+.mwcal-ev small{display:block;color:#666;font-weight:400}
+.mwcal-list{display:none;padding:0 16px 16px}
+.mwcal-li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.mwcal-li .d{flex:0 0 54px;text-align:center;font-family:Oswald,sans-serif;text-transform:uppercase}
+.mwcal-li .d b{display:block;font-size:24px;color:var(--red)}
+.mwcal-li .d span{font-size:11px;letter-spacing:.12em;color:#777}
+.mwcal-li .e{flex:1}
+@media(max-width:760px){.mwcal-grid{display:none}.mwcal-list{display:block}}
+</style>
+<div class="mwcal" id="mwcal">
+  <div class="mwcal-top"><button type="button" data-step="-1" aria-label="Previous month">&#8249;</button><h3 id="mwcal-title"></h3><button type="button" data-step="1" aria-label="Next month">&#8250;</button></div>
+  <div class="mwcal-grid" id="mwcal-grid"></div>
+  <div class="mwcal-list" id="mwcal-list"></div>
+</div>
+<script>
+(function(){
+  /* EDIT EVENTS HERE. Weekly: day 0=Sun ... 6=Sat. Special: 'YYYY-MM-DD'. */
+  var WEEKLY=[
+    {day:2,title:'Trivia Night',time:'6–8 PM'},
+    {day:3,title:'Music Bingo',time:''},
+    {day:4,title:'Karaoke',time:''},
+    {day:5,title:'Rock & Bowl',time:'9:30 PM–Midnight'}
+  ];
+  var SPECIAL={
+    '2026-10-31':[{title:'Halloween Party',time:''}],
+    '2026-11-11':[{title:'Veterans Bowl Free',time:'All day'}],
+    '2026-12-31':[{title:'New Year’s Eve Party',time:''}]
+  };
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  var now=new Date(), base=new Date(now.getFullYear(),now.getMonth(),1), off=0;
+  function key(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function evs(d){
+    var sp=(SPECIAL[key(d)]||[]).map(function(e){return {title:e.title,time:e.time,sp:1};});
+    var wk=WEEKLY.filter(function(e){return e.day===d.getDay();});
+    return sp.concat(wk);
+  }
+  function chip(e){return '<span class="mwcal-ev'+(e.sp?' sp':'')+'">'+esc(e.title)+(e.time?'<small>'+esc(e.time)+'</small>':'')+'</span>';}
+  function render(){
+    var m=new Date(base.getFullYear(),base.getMonth()+off,1), y=m.getFullYear(), mo=m.getMonth();
+    document.getElementById('mwcal-title').textContent=MONTHS[mo]+' '+y;
+    document.querySelector('#mwcal [data-step="-1"]').disabled=(off<=0);
+    var g=DOW.map(function(d){return '<div class="mwcal-dow">'+d+'</div>';}).join('');
+    var start=new Date(y,mo,1-((m.getDay()+6)%7)), list='';
+    for(var i=0;i<42;i++){
+      var d=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i);
+      if(i>=35&&d.getMonth()!==mo) break;
+      var inM=d.getMonth()===mo, e=inM?evs(d):[], today=key(d)===key(now);
+      g+='<div class="mwcal-day'+(inM?'':' out')+(today?' today':'')+'"><span class="n">'+d.getDate()+'</span>'+e.map(chip).join('')+'</div>';
+      if(inM&&e.length&&d>=new Date(now.getFullYear(),now.getMonth(),now.getDate()))
+        list+='<div class="mwcal-li"><div class="d"><b>'+d.getDate()+'</b><span>'+DOW[(d.getDay()+6)%7]+'</span></div><div class="e">'+e.map(chip).join('')+'</div></div>';
+    }
+    document.getElementById('mwcal-grid').innerHTML=g;
+    document.getElementById('mwcal-list').innerHTML=list||'<p style="padding:12px 0">No events listed yet this month.</p>';
+  }
+  document.querySelectorAll('#mwcal [data-step]').forEach(function(b){b.addEventListener('click',function(){off=Math.max(0,off+(+b.dataset.step));render();});});
+  render();
+})();
+</script>
+</div></div>
 <div class="mwh">
   <section class="mwh-section mwh-know">
     <div class="mwh-wrap">
@@ -3797,7 +3873,7 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
           <p>Questions? Email <a class="mwh-link" href="mailto:contact@midwaybowl.com">contact@midwaybowl.com</a></p>
         </div>
         <div class="mwh-formcard">
-<div style="min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#777;border:2px dashed #cfcfcf;border-radius:8px">Your live Employment Form<br>appears here</div>
+<iframe src="https://api.leadconnectorhq.com/widget/form/DhGo2NDsL4RPIW50zA3T" style="width:100%;height:1000px;border:none;border-radius:3px" id="inline-DhGo2NDsL4RPIW50zA3T" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Employment Form" data-height="1000" data-layout-iframe-id="inline-DhGo2NDsL4RPIW50zA3T" data-form-id="DhGo2NDsL4RPIW50zA3T" title="Employment Form"></iframe>
         </div>
       </div>
     </div>
@@ -3829,7 +3905,7 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
           <a class="mwh-link" href="#events">See Group Packages</a>
         </div>
         <div class="mwh-formcard">
-<div style="min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#777;border:2px dashed #cfcfcf;border-radius:8px">Your live Donation Request Form<br>appears here</div>
+<iframe src="https://api.leadconnectorhq.com/widget/form/HRbX1aMCLe2JIj3BAHcJ" style="width:100%;height:1188px;border:none;border-radius:3px" id="inline-HRbX1aMCLe2JIj3BAHcJ" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Donation Request Form" data-height="1188" data-layout-iframe-id="inline-HRbX1aMCLe2JIj3BAHcJ" data-form-id="HRbX1aMCLe2JIj3BAHcJ" title="Donation Request Form"></iframe>
         </div>
       </div>
     </div>
@@ -4016,5 +4092,6 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
 })();
 
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
