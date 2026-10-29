@@ -3781,18 +3781,8 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
 </div>
 <script>
 (function(){
-  /* EDIT EVENTS HERE. Weekly: day 0=Sun ... 6=Sat. Special: 'YYYY-MM-DD'. */
-  var WEEKLY=[
-    {day:2,title:'Trivia Night',time:'6–8 PM'},
-    {day:3,title:'Music Bingo',time:''},
-    {day:4,title:'Karaoke',time:''},
-    {day:5,title:'Rock & Bowl',time:'9:30 PM–Midnight'}
-  ];
-  var SPECIAL={
-    '2026-10-31':[{title:'Halloween Party',time:''}],
-    '2026-11-11':[{title:'Veterans Bowl Free',time:'All day'}],
-    '2026-12-31':[{title:'New Year’s Eve Party',time:''}]
-  };
+  /* Events are loaded from /events.json */
+  var WEEKLY=[], SPECIAL={};
   var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var DOW=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
   var now=new Date(), base=new Date(now.getFullYear(),now.getMonth(),1), off=0;
@@ -3822,7 +3812,13 @@ body.home.mwh-has-sticky .proto-tag{bottom:76px;}
     document.getElementById('mwcal-list').innerHTML=list||'<p style="padding:12px 0">No events listed yet this month.</p>';
   }
   document.querySelectorAll('#mwcal [data-step]').forEach(function(b){b.addEventListener('click',function(){off=Math.max(0,off+(+b.dataset.step));render();});});
+  var DN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   render();
+  fetch('/events.json?v='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    WEEKLY=(d.weekly||[]).map(function(e){return {day:DN.indexOf(e.day),title:e.title,time:e.time||''};});
+    SPECIAL={}; (d.special||[]).forEach(function(e){(SPECIAL[e.date]=SPECIAL[e.date]||[]).push({title:e.title,time:e.time||''});});
+    render();
+  }).catch(function(){});
 })();
 </script>
 </div></div>

@@ -1,0 +1,42 @@
+{
+  "_help": "Weekly events repeat every week (day: Sunday..Saturday). Special events are one-off (date: YYYY-MM-DD).",
+  "weekly": [
+    {
+      "day": "Tuesday",
+      "title": "Trivia Night",
+      "time": "6–8 PM"
+    },
+    {
+      "day": "Wednesday",
+      "title": "Music Bingo",
+      "time": ""
+    },
+    {
+      "day": "Thursday",
+      "title": "Karaoke",
+      "time": ""
+    },
+    {
+      "day": "Friday",
+      "title": "Rock & Bowl",
+      "time": "9:30 PM–Midnight"
+    }
+  ],
+  "special": [
+    {
+      "date": "2026-10-31",
+      "title": "Halloween Party",
+      "time": ""
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Veterans Bowl Free",
+      "time": "All day"
+    },
+    {
+      "date": "2026-12-31",
+      "title": "New Year’s Eve Party",
+      "time": ""
+    }
+  ]
+}
